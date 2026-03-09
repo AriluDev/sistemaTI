@@ -5,6 +5,7 @@ import lombok.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.time.LocalDateTime;
+import com.mounstros_de_la_computacion.sistemaTI.model.entity.Cliente;
 
 @Entity
 @Getter
