@@ -17,7 +17,7 @@ public class TecnicoService {
     public Tecnico create(TecnicoDto tecnicoDto) {
         Tecnico tecnico = Tecnico.builder()
         .nombre(tecnicoDto.getNombre())
-        .especialidad(tecnicoDto.getNombre())
+        .especialidad(tecnicoDto.getEspecialidad())
         .build();
         return tecnicoRepository.create(tecnico);
     }

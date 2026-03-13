@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class TecnicoController {
-    private TecnicoService tecnicoService;
+    private final TecnicoService tecnicoService;
 
     @PostMapping
     @Operation(summary = "Crear un técnico", description = "Permite registrar técnicos desde un entorno externo")
