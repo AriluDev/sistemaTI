@@ -1,23 +1,13 @@
 package com.mounstros_de_la_computacion.sistemaTI.model.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-
 public class Tecnico {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    @Column(nullable = false)
+    private Integer id;
     private String nombre;
-
-    @Column(nullable = false)
     private String especialidad;
 }

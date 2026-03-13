@@ -12,7 +12,7 @@
 	<artifactId>sistemaTI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sistemaTI</name>
-	<description>Un sistema con API RESTful</description>
+	<description>El mejor sistema.</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -27,60 +27,29 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>25</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
 		</dependency>
-
-		<!-- Depdencia Lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.32</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<!-- Recarga automática -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
-
-		<!-- Source: https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
 		<dependency>
-			<groupId>jakarta.validation</groupId>
-			<artifactId>jakarta.validation-api</artifactId>
-			<version>4.0.0-M1</version>
-			<scope>compile</scope>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-    		<groupId>org.projectlombok</groupId>
-    		<artifactId>lombok</artifactId>
-    		<version>1.18.30</version>
-    		<scope>provided</scope>
-		</dependency>
-
-		<!-- Recarga automática -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-
 		<!-- Source: https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
 		<dependency>
 			<groupId>jakarta.validation</groupId>
@@ -88,22 +57,17 @@
 			<version>4.0.0-M1</version>
 			<scope>compile</scope>
 		</dependency>
-
+		<!-- Source: https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
 		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>io.swagger.core.v3</groupId>
-			<artifactId>swagger-annotations</artifactId>
-			<version>2.2.20</version>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.6.0</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -112,12 +76,10 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-							<version>1.18.32</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -126,12 +88,10 @@
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-
 						</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 
