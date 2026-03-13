@@ -1,9 +1,9 @@
 package com.mounstros_de_la_computacion.sistemaTI.dto;
 
-import com.mounstros_de_la_computacion.model.entity.Cliente;
-import java.util.Date;
+import com.mounstros_de_la_computacion.sistemaTI.model.entity.Cliente;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data

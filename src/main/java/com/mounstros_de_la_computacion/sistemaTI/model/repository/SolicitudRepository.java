@@ -25,4 +25,16 @@ public class SolicitudRepository {
     public Optional<Solicitud> searchById(Integer id) {
         return Optional.ofNullable(solicitudes.get(id));
     }
+
+    public List<Solicitud> searchByCliente(Integer clienteId) {
+        List<Solicitud> resultado = new ArrayList<>();
+
+        for(Solicitud solicitud : solicitudes.values()) {
+            if (solicitud.getCliente() != null &&
+                solicitud.getCliente().getId().equals(clienteId)) {
+                    resultado.add(solicitud);
+                }
+        }
+        return resultado;
+    }
 }
