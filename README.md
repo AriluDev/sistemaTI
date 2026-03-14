@@ -12,3 +12,6 @@
 * **Versión de JDK:** 21.
 
 ## ¿Cómo Usar el Sistema?
+1. Clonar el repositorio.
+2. Ejecutar el siguiente comando en la carpeta raíz del proyecto -> mvnw.cmd clean install
+3. Luego ejecutar -> mvnw.cmd spring-boot:run
