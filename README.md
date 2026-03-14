@@ -15,3 +15,56 @@
 1. Clonar el repositorio.
 2. Ejecutar el siguiente comando en la carpeta raíz del proyecto -> mvnw.cmd clean install
 3. Luego ejecutar -> mvnw.cmd spring-boot:run
+
+## Flujo del Sistema:
+
+                ┌───────────────┐
+                │    CLIENTE    │
+                │  (Postman)    │
+                └───────┬───────┘
+                        │
+                        │ HTTP Request (JSON)
+                        ▼
+               ┌──────────────────┐
+               │   Controller     │
+               │ SolicitudController
+               └────────┬─────────┘
+                        │
+                        │ convierte JSON → DTO
+                        ▼
+               ┌──────────────────┐
+               │       DTO        │
+               │   SolicitudDto   │
+               │ (validaciones)   │
+               └────────┬─────────┘
+                        │
+                        │ pasa datos al servicio
+                        ▼
+               ┌──────────────────┐
+               │      Service     │
+               │  SolicitudService│
+               │ lógica de negocio│
+               └────────┬─────────┘
+                        │
+                        │ crea Entity
+                        ▼
+               ┌──────────────────┐
+               │      Entity      │
+               │    Solicitud     │
+               │  modelo dominio  │
+               └────────┬─────────┘
+                        │
+                        │ guarda datos
+                        ▼
+               ┌──────────────────┐
+               │    Repository    │
+               │ SolicitudRepository
+               │ acceso a datos   │
+               └────────┬─────────┘
+                        │
+                        │ almacenamiento
+                        ▼
+               ┌──────────────────┐
+               │   HashMap / DB   │
+               │ (simulación DB)  │
+               └──────────────────┘
