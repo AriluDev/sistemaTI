@@ -10,6 +10,7 @@
 
 ## Información del Proyecto:
 * **Versión de JDK:** 21.
+* **Pruebas en Postman:** https://1drv.ms/f/c/06d49ddfd45f579b/IgC4ojGQL2W3R67Dl-XWJfL7AXBkjpMY77dFqgJRa9EPE5o?e=44KWAq
 
 ## ¿Cómo Usar el Sistema?
 1. Clonar el repositorio.
